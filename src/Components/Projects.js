@@ -3,7 +3,9 @@ import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
 
-
+	deleteProject(id){
+		this.props.onDelete(id);
+	}
 	
 	render(){
 //all stuff are in render?
@@ -13,7 +15,7 @@ class Projects extends Component {
 		projectItems = this.props.projects.map(project => {
 			return(
 //return each project as property
-				<ProjectItem key={project.title} project={project} />
+				<ProjectItem onDelete={this.deleteProject.bind(this)} key={project.title} project={project} />
 				)
 		});
 	}
