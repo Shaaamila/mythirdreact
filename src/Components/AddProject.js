@@ -17,8 +17,22 @@ class AddProject extends Component {
 	}
 
 	handleSubmit(e){
+//validating:		
+		if(this.refs.title.value === ''){
+			alert('Title is required');
+		} else {
+//if all working, need to put the data in value of setState:
+			this.setState({newProject:{
+				title: this.refs.title.value,
+				category: this.refs.category.value
+			}}, function(){
+	//matching this state with main component state in app.js
+	//so they can access			
+				this.props.addProject(this.state.newProject);
+			});
+		};
 //for not to submit the form
-		console.log(this.refs.title.value);
+
 		e.preventDefault();
 	}
 
