@@ -18,6 +18,7 @@ class AddProject extends Component {
 
 	handleSubmit(e){
 //for not to submit the form
+		console.log(this.refs.title.value);
 		e.preventDefault();
 	}
 
@@ -32,7 +33,7 @@ class AddProject extends Component {
       
       			<h3>Add Project</h3>
 
-			      <form onSubmit={this.handleSubmit}>
+			      <form onSubmit={this.handleSubmit.bind(this)}>
 			      	<div>
 			      		<label>Title</label><br/>
 			      		<input type="text" ref="title" />
