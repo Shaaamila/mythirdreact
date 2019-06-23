@@ -6,19 +6,23 @@ class Projects extends Component {
 
 	
 	render(){
+//all stuff are in render?
 // testing if there are any Projects:
 	let projectItems;  //declaring variable before using it
 	if(this.props.projects){
 		projectItems = this.props.projects.map(project => {
-			console.log(project);
+			return(
+//return each project as property
+				<ProjectItem project={project} />
+				)
 		});
 	}
 
 
     return (
     <div className="Projects">
-      My Projects
-      {this.props.test}
+      
+      {projectItems}
     </div>
   );
 }
