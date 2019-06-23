@@ -6,7 +6,7 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      project: [
+      projects: [
         {
           title: 'Business Website',
           category: 'Web Design'
