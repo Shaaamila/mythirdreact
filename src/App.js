@@ -3,7 +3,7 @@ import Projects from './Components/Projects'
 import './App.css';
 
 class App extends Component {
-  contructor(){
+  constructor(){
     super();
     this.state = {
       project: [
