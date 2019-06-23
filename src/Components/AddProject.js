@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import uuid from 'uuid';
 
 class AddProject extends Component {
 //to store the submitted date:
@@ -23,6 +23,7 @@ class AddProject extends Component {
 		} else {
 //if all working, need to put the data in value of setState:
 			this.setState({newProject:{
+				id: uuid.v4(),
 				title: this.refs.title.value,
 				category: this.refs.category.value
 			}}, function(){
@@ -31,9 +32,8 @@ class AddProject extends Component {
 				this.props.addProject(this.state.newProject);
 			});
 		};
-//for not to submit the form
 
-		e.preventDefault();
+		e.preventDefault(); //for not to submit the form
 	}
 
 	render(){
