@@ -68,7 +68,6 @@ class AddProject extends Component {
 		}
 }
 
-
 //validating using PropTypes
 // AddProject.propTypes = {
 // 	categories: React.PropTypes.array,
