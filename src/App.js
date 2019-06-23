@@ -7,6 +7,13 @@ class App extends Component {
     super();
     this.state = {
       projects: [
+
+      ]
+    }
+  }
+
+  componentWillMount(){
+    this.setState({projects: [
         {
           title: 'Business Website',
           category: 'Web Design'
@@ -19,9 +26,10 @@ class App extends Component {
           title: 'Ecommerce Shopping Cart',
           category: 'Web Development'
         }
-      ]
-    }
+      ]});
   }
+
+  
   render(){
   return (
     <div className="App">
