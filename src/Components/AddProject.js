@@ -67,7 +67,16 @@ class AddProject extends Component {
   			);
 		}
 }
+
+
+//validating using PropTypes
+// AddProject.propTypes = {
+// 	categories: React.PropTypes.array,
+// 	addProject: React.PropTypes.func 
+// }
+export default AddProject;
+
+
 // '/' in <br> and <input> as they are not html5 but JSX
 //or else error
 
-export default AddProject;
