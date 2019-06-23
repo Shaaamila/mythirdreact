@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ProjectItem from './ProjectItem';
 
 class Projects extends Component {
 
@@ -13,7 +13,7 @@ class Projects extends Component {
 		projectItems = this.props.projects.map(project => {
 			return(
 //return each project as property
-				<ProjectItem project={project} />
+				<ProjectItem key={project.title} project={project} />
 				)
 		});
 	}
