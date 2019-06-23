@@ -2,11 +2,23 @@ import React, { Component } from 'react';
 
 
 class AddProject extends Component {
+//to store the submitted date:
+	constructor(){
+		super();
+		this.state = {
+			newProject:{}
+		}
+	}
 
 //categories needs to be property of the component
 	//default property:
 	static defaultProps = {
 		categories: ['Web Design', 'Web Development', 'Mobile Development']
+	}
+
+	handleSubmit(e){
+//for not to submit the form
+		e.preventDefault();
 	}
 
 	render(){
@@ -20,7 +32,7 @@ class AddProject extends Component {
       
       			<h3>Add Project</h3>
 
-			      <form>
+			      <form onSubmit={this.handleSubmit}>
 			      	<div>
 			      		<label>Title</label><br/>
 			      		<input type="text" ref="title" />
@@ -30,7 +42,8 @@ class AddProject extends Component {
 			      		<select ref="category">
 			      			{categoryOptions}
 			      		</select>
-			      	</div>     	
+			      	</div>   
+			      	<input type="submit" value="Submit" />  	
 			      </form>
 
     		</div>
